@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div *ngFor="let item of events">
+  	<card-event [event]=item (click)="onEvent(item)"></card-event>
+  </div>
+  <button ion-button class="button-float blue-eventtus">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-content>
